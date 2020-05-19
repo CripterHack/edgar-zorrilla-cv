@@ -119,7 +119,7 @@
           <div class="subheadline">{{experience.timeperiod}}</div>
           <p class="info">
             {{experience.description}}
-          </p>  
+          </p>
       </a>
     </div>
     <div class="section-headline">{{ lang.education }}</div>
@@ -474,7 +474,8 @@ h4 {
       }
     }
   }
-  .item.last{ 
+  .item.last{
+    padding-bottom:1.5em;
     .text {
       border-bottom-style:none;
       padding-bottom:0;

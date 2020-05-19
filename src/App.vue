@@ -24,6 +24,12 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  background: #CCCCCC;
+  font-family: roboto,sans-serif;
+  color: #545e6c;
+  background: #f5f5f5;
+  font-size: 14px;
+  padding: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

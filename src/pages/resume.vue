@@ -23,7 +23,7 @@ export default Vue.component('resume', {
 }
 .page-wrapper {
   overflow-x: hidden;
-  background: #CCCCCC;
+  background: #f5f5f5;
   margin: 0;
   padding: 0;
   -webkit-print-color-adjust: exact;
@@ -43,5 +43,21 @@ export default Vue.component('resume', {
   display: block;
   page-break-after: auto;
   overflow: hidden;
+}
+@media not print {
+  .page {
+    max-width: 1000px;
+    width:90%;
+    height:auto;
+    margin: 0 auto;
+    position: relative;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  }
+}
+@media print {
+  body{padding:0}
+  .page {width:21cm;height:29.68cm}
 }
 </style>

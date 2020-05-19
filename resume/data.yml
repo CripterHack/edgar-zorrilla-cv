@@ -1,71 +1,108 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Edgar
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  last: Zorrilla
+about: I am a web\/app developer, designer, and writer at IzignaMx currently living in CDMX, México. With 6 years of web design\/development experience. My interests range from web\/app design\/development, lettering, hacking to astrophysics. I am also interested in user experience, gaming, wine and of course pizza... I work for my self as CEO in IzignaMx A Start-Up for freelancers. ¡I love make innovative design, and create amazing things!
+position: SemiSenior FullStack Developer
 
 birth:
-  year: 1990
-  location: New York
+  year: 1995
+  location: Mexico city
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: Mousai - the art of coding
+  position: FullStack Developer
+  timeperiod: January 2019 - April 2020
+  description: Implementación de diseño desde invision y desarrollo en WordPress, Shopify Liquid. Diseño Web y de Apps en Photoshop, Sketch (Mac), Invision, Figma, Inkscape, GIMP. Actualización, mantenimiento y optimización de proyectos colaborativos con github y Visual Studio, Creación de tutoriales para uso del cliente, Cotización y Planeación de proyectos.
+  website: https://mousai.io
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: Digitalab
+  position: Web Designer/Developer
+  timeperiod: April 2016 - April 2019
+  description: Blogs, Tiendas, Sistemas de reserva online, CRM, POS en WordPress, Estilización de plantillas corporativas para Campañas "Mailing" en Mailchimp. Sitios nativos en HTML para One Pages. Estudio, Implementación y Optimización SEO. Optimización en entrega y peso de scripts/imágenes/html/cache. Configuración de .htacess y robots.txt. Análisis y Optimización de seguridad en plataformas Web, Google Analytics, Keyword Planner, SmartLook, CentOS, Plesk, Webmin, Certificados SSL, Animaciones SVG+JS+CSS. Modificación y creación de themes y plugins en WordPress con PHP, CSS y JS. Navegación y requisición de elementos/data con AJAX. Mobile First. Facebook & Messenger API. Proyectos theorganichearthco.com, kartellmexico.com, mukka.mx, entrale.org, greencarpet.com.mx, crucerosflamingo, criminal.com.mx, lospinostultepec.com, grupodescoa.com, inkstudio, ikus-marketing, eypets, santapizza.com.mx, drackermans, gondolachocolateria.com.mx, entre otros.
+  website: https://digitalab.mx
 
-- company: Company C
-  position: Trainee
+- company: Inc Marketing
+  position: FullStack Developer
   timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+  description: Plataformas CMS en WordPress, SilverStripe, PageKit. Plataforma CRM en PHP (Symphony). Sistema "Real State" en ReactJs, Ecommerces con Woocommerce + Conekta / OpenPay. Big Data de precios en tablas "csv". Interacción con APIs, Login con Redes Sociales. Proyectos. goldmanberkeley.com, autofacil.com, jarming.mx, crm.jarming.mx, incmarketing.com.mx, mrsushi.rest, estilos en plataforma dr-chef para mrsushi, subastaenergetica.com.
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- degree: Computer Systems Engineering
+  timeperiod: Since 01/2020.
+  description: Current average 9.85. 6 of 27 subjects studied. Online studies. Currently studying 2 subjects per month., Utel university, Mexico city.
+  website: https://www.utel.edu.mx/sites/default/files/Ingenieria-en-Sistemas-Computacionales.pdf
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: General Baccalaureate Exam
+  timeperiod: April 2016.
+  description: Average 8.5, CENEVAL certification, Mexico city.
 
 # skill level goes 0 to 100
 skills:
 - name: HTML5
-  level: 99
+  level: 100
 - name: CSS3
+  level: 100
+- name: JS Vanilla
   level: 95
-- name: JavaScript
-  level: 97
+- name: jQuery
+  level: 100
+- name: SQL
+  level: 80
+- name: PHP
+  level: 90
+- name: UI
+  level: 95
+- name: UX
+  level: 65
+- name: SEO
+  level: 75
+- name: Python
+  level: 70
 - name: Node.js
-  level: 93
-- name: Angular 2
+  level: 70
+- name: Grunt
+  level: 70
+- name: Gulp
   level: 60
+- name: Webpack
+  level: 60
+- name: React
+  level: 60
+- name: Ionic
+  level: 65
+- name: Angular 2
+  level: 65
 - name: TypeScript
   level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: Shopify Liquid
+  level: 80
+- name: Bash
+  level: 60
+- name: JSON
+  level: 100
+- name: Windows
+  level: 90
+- name: MacOS
+  level: 80
+- name: Linux
+  level: 90
+- name: Pixel Perfect
+  level: 95
+- name: Responsive design
+  level: 100
+- name: cPanel/WHM
+  level: 90
+knowledge: Also proficient in Adobe Photoshop and Illustrator, Figma, Invision, Sketch, Inkscape, GIMP, GIT, Visual Studio and grew up bilingual
+  (Spanish native and English).
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Portfolio
+  platform:
+  timeperiod: February 2014 - 2016
+  description: My two first years of work. Mostly are design and coding implementation on HTML+CSS+JS or WordPress.
+  url: https://drive.google.com/open?id=0BwjnDrnqMQI6b1hWc3RYTlo2Zlk
 
 hobbies:
 - name: Video Games
@@ -77,17 +114,17 @@ hobbies:
   url: https://example.com
 
 contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name:
+  description:
+  url:
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
-# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+  email: edgar@izignamx.com
+  phone: +52 55 3376 0889
+  street: Mexico city
+  city: CDMX
+  website: https://linkedin.com/in/cripterhack
+  github: cripterhack
+# en, de, fr, pt, ca, cn, it, es
 lang: en
 `
