@@ -1,223 +1,387 @@
 <template>
-<div class="home">
-  <a href="https://github.com/salomonelli/best-resume-ever" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-  <div class="logo">
-    <img src="../assets/logo.png" />
-  </div>
-  <h3 class="title">best-resume-ever</h3>
-  <div class="previews">
-    <div class="preview">
-      <router-link v-bind:to="'/resume/material-dark'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-material-dark.png" />
-          <span>material-dark</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/material-dark-projects'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-material-dark-projects.png" />
-          <span>material-dark-projects</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/left-right'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-left-right.png" />
-          <span>left-right</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/left-right-projects'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-left-right-projects.png" />
-          <span>left-right-projects</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/left-right-rtl'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-left-right-rtl.png" />
-          <span>left-right-rtl</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/oblique'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-oblique.png" />
-          <span>oblique</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/oblique-projects'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-oblique-projects.png" />
-          <span>oblique-projects</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-        <router-link v-bind:to="'/resume/oblique-rtl'">
-            <div class="preview-wrapper">
-                <img src="../assets/preview/resume-oblique-rtl.png" />
-                <span>oblique-rtl</span>
+  <div class="page-wrapper">
+    <div class="page" id="PageCV">
+      <div class="page-inner">
+        <div class="resume">
+          <div class="banner">
+            <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
+            <div class="banner__position">{{ person.position }}</div>
+            <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
+          </div>
+          <div class="content">
+            <div class="content__left">
+              <div class="section">
+                <div class="section-headline">
+                  {{ lang.about }}
+                </div>
+                <div class="section-content section-content--plain">
+                  {{ person.about }}
+                  <br/>
+                  <br/>
+                  {{ person.knowledge }}
+                </div>
+              </div>
+              <div
+                v-if="person.skills"
+                class="section">
+                <div class="section-headline">
+                  {{ lang.skills }}
+                </div>
+
+                <div class="section-content-grid">
+                  <a
+                    v-for="(skill, index) in person.skills"
+                    class="grid-item"
+                    :key="index"
+                    :class="{ link: skill.url !== undefined}"
+                    :href="skill.url">
+                    <span class="squarred-grid-item">
+                      {{ skill.name }}
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="section">
+                <div class="section-headline">
+                  {{ lang.contact }}
+                </div>
+                <div class="section-content section-content--plain">
+                  <div class="section-link">
+                    <i class="section-link__icon material-icons">business</i>{{ person.contact.street }}
+                  </div>
+                  <a class="section-link link"
+                    :href="contactLinks.email">
+                    <i class="section-link__icon material-icons">mail</i>{{ person.contact.email }}
+                  </a>
+                  <div class="section-link">
+                    <i class="section-link__icon material-icons">phone</i>{{ person.contact.phone }}
+                  </div>
+                  <a v-if="person.contact.website"
+                    class="section-link link"
+                    :href="person.contact.website">
+                    <i class="section-link__icon fa fa-globe"></i>{{ person.contact.website }}
+                  </a>
+                  <a v-if="person.contact.linkedin"
+                    class="section-link link"
+                    :href="contactLinks.linkedin">
+                    <i class="section-link__icon fa fa-linkedin"></i>{{ person.contact.linkedin }}
+                  </a>
+                  <a v-if="person.contact.github"
+                    class="section-link link"
+                    :href="contactLinks.github">
+                    <i class="section-link__icon fa fa-github"></i>{{ person.contact.github }}
+                  </a>
+                  <a v-if="person.contact.medium"
+                    class="section-link link"
+                    :href="contactLinks.medium">
+                    <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
+                  </a>
+                </div>
+              </div>
             </div>
-        </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/side-bar'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-side-bar.png" />
-          <span>side-bar</span>
+
+            <div class="content__right">
+              <div class="section">
+                <div class="section-headline">
+                  <i class="section-headline__icon material-icons">work</i>{{ lang.experience }}
+                </div>
+                <div class="section-content">
+                  <a v-for="(experience, index) in person.experience"
+                    :key="index"
+                    class="section-content__item"
+                    :class="{ link: experience.website !== undefined}"
+                    :href="experience.website">
+
+                    <span class="section-content__header">{{ experience.position }}</span>
+                    <span class="section-content__subheader">
+                      {{ experience.company }}
+                      <span class="section-content__plain">{{ experience.location }}</span>
+                    </span>
+                    <div class="section-content__text">{{ experience.timeperiod }}</div>
+                    <span class="section-content__text--light">{{ experience.description }}</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="section">
+                <div class="section-headline">
+                  <i class="section-headline__icon material-icons">school</i>{{ lang.education }}
+                </div>
+
+                <div class="section-content">
+                  <a
+                    v-for="(education, index) in person.education"
+                    class="section-content__item"
+                    :key="index"
+                    :class="{ link: education.website !== undefined}"
+                    :href="education.website">
+
+                    <span class="section-content__header"> {{ education.school }} </span>
+                    <span class="section-content__subheader">{{ education.degree }}</span>
+                    <span class="section-content__text"> {{ education.timeperiod }} </span>
+                    <span class="section-content__text--light"> {{ education.description }} </span>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                v-if="person.projects"
+                class="section">
+                <div class="section-headline">
+                  <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
+                </div>
+
+                <div class="section-content-grid">
+                  <a v-for="(project, index) in person.projects" :key="index"
+                    class="section-content__item-grid"
+                    :class="{ link: project.url !== undefined}"
+                    :href="project.url">
+                    <span class="section-content__header"> {{ project.name }} </span>
+                    <span class="section-content__subheader">{{ project.platform }}</span>
+                    <span class="section-content__text"> {{ project.description }} </span>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                v-if="person.contributions"
+                class="section">
+                <div class="section-headline">
+                  <i class="section-headline__icon fa fa-heart"></i>{{lang.contributions}}
+                </div>
+
+                <div class="section-content-grid">
+                  <a v-for="(contribution, index) in person.contributions"
+                    class="section-content__item-grid"
+                    :key="index"
+                    :class="{ link: contribution.url !== undefined}"
+                    :href="contribution.url">
+                    <span class="section-content__header"> {{ contribution.name }} </span>
+                    <span class="section-content__text"> {{ contribution.description }} </span>
+                    <span class="section-content__text--light" style="word-break: break-all;">
+                      {{ contribution.url }}
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img class="picture"/>
         </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/side-bar-projects'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-side-bar-projects.png" />
-          <span>side-bar-projects</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/side-bar-rtl'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-side-bar-rtl.png" />
-          <span>side-bar-rtl</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/purple'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-purple.png" />
-          <span>purple</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/creative'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-creative.png" />
-          <span>creative</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/cool'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-cool.png" />
-          <span>cool</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/cool-rtl'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-cool-rtl.png" />
-          <span>cool-rtl</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/cool-rtl2'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-cool-rtl2.png" />
-          <span>cool-rtl2</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/green'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-green.png" />
-          <span>green</span>
-        </div>
-      </router-link>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 import Vue from 'vue';
-export default Vue.component('resume', {
-    name: 'app'
-});
+import { getVueOptions } from './options';
+const name = 'PageCV';
+export default Vue.component(name, getVueOptions(name));
 </script>
+<style lang="less" scoped>
+@accent-color: #34495E;
+@banner-color: #42b883;
+@banner-height: 120px;
+@picture-size: 120px;
+@picture-offset: 35px;
+@base-padding: 30px;
+@left-column-width: 240px;
 
-<style scoped>
-.home {
-  font-family: 'Roboto' !important;
+.link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration-line: none;
+  &:visited{color:inherit}
 }
 
-.logo {
-  text-align: center;
+.resume {
+  position: relative;
+  font-family:'Roboto' !important;
+  font-size: 0.9em;
 }
 
-.logo img {
-  height: 50px;
-  margin-top: 40px;
+.picture {
+  position: absolute;
+  top: @banner-height - @picture-offset;
+  left: @left-column-width + @base-padding * 2 - @picture-size / 2;
+  height: @picture-size;
+  width: @picture-size;
+  border-radius: 50%;
+  border: 5px solid @accent-color;
+  content: url('../../resume/id.jpg');
+  z-index: 2;
 }
 
-.title {
-  font-weight: normal;
-  text-align: center;
+.banner {
+  width: calc(100% - @base-padding * 2);
+  height: @banner-height;
+  padding: @base-padding;
+  background-color: @banner-color;
+  /*
+    background-image: url('../../resume/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  */
+  color: white;
+  &__fullname{font-size:32px}
+  &__position{font-size:16px}
+  &__location{font-size:12px}
+}
+
+.content {
+  display: flex;
   width: 100%;
-  color: black;
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 110%;
-  margin: 1.78rem 0 1.424rem 0;
-  margin-top: 0px;
-  margin-bottom: 40px;
+  height: 100%;
+
+  &__left,
+  &__right {
+    height: 100%;
+    padding: @base-padding;
+  }
+
+  &__left {
+    width: @left-column-width;
+    color: rgba(255, 255, 255, 0.59);
+    background-color: @accent-color;
+
+    .section-headline {
+      color: white;
+    }
+  }
+
+  &__right{flex:1}
 }
 
-.previews {
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+.section {
+  margin: 20px 0;
 }
 
-.preview {
-  width: 180px;
-  float: left;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
-  margin-bottom: 1.5%;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  height: 252px;
+.section-link,
+.section-headline {
+  display: flex !important;
+  align-items: center;
+  color: @accent-color;
+  display: inline-block;
+  font-size: 1.2em;
+  margin: 8px 0;
+
+  &__icon {
+    margin-right: 8px;
+    font-size: 1.4em;
+  }
+}
+
+.section-link {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.59) !important;
+  &__icon{color:white}
+}
+
+.section-content {
+  margin-top: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+
+  &__item {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__header {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  &__subheader {
+    display: block;
+    font-weight: 400;
+  }
+
+  &__plain,
+  &__text {
+    display: block;
+    font-size: 12px;
+
+    &--light{font-size:12px}
+  }
+
+  &__plain {
+    display: inline;
+    font-weight: 300;
+  }
+
+  &__item-grid {
+    flex: 1 1 0;
+    margin-bottom: 5px;
+    padding-right: 5px;
+  }
+
+  &--plain{padding:0}
+}
+
+.section-content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.grid-item{padding-right:5px}
+.squarred-grid-item {
+  display: block;
+  border: 1px solid white;
+  color: white;
+  margin-top: 5px;
+  padding: 5px;
+}
+</style>
+<style scoped>
+.page-inner{
+  height: 100%;
+  width: 100%;
+}
+.page-wrapper {
+  overflow-x: hidden;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  box-sizing: border-box;
+}
+
+.resume {
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  background: white;
+  position: relative;
+  width: 21cm;
+  height: 29.68cm;
+  display: block;
+  page-break-after: auto;
   overflow: hidden;
 }
-
-.preview-wrapper {
-  position: relative;
-  background: white;
+@media not print {
+  .page {
+    max-width: 1000px;
+    width:90%;
+    height:auto;
+    margin: 0 auto;
+    position: relative;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  }
 }
-
-.preview img {
-  width: 100%;
-  opacity: 0.5;
-  filter: blur(1px);
-}
-
-.preview span {
-  position: absolute;
-  max-width: 100%;
-  font-size: 24px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.75);
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
+@media print {
+  body{padding:0}
+  .page {width:21cm;height:29.68cm}
+  .section-content{padding-left:0!important}
 }
 </style>
