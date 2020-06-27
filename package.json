@@ -10,7 +10,7 @@
   },
   "scripts": {
     "docs": "node build/build.js",
-    "docs:serve": "cd docs/ && ws --port 8080 --rewrite '/best-resume-ever/* -> /$1'",
+    "docs:serve": "cd docs/ && ws --port 8080 --rewrite '/edgar-zorrilla-cv/* -> /$1'",
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "pdf": "node scripts/export.js",

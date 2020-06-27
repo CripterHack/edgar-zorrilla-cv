@@ -59,7 +59,7 @@ const convert = async () => {
                 args: ['--no-sandbox']
             });
             const page = await browser.newPage();
-            await page.goto(`http://localhost:${config.dev.port}/#/resume/` + dir.name, {
+            await page.goto(`http://localhost:${config.dev.port}/#/`, {
                 waitUntil: 'networkidle2'
             });
 
@@ -69,7 +69,7 @@ const convert = async () => {
                 fs.mkdirSync(fullDirectoryPath);
             }
             await page.pdf({
-                path: fullDirectoryPath + dir.name + '.pdf',
+                path: fullDirectoryPath + 'edgar-zorrilla-cv' + '.pdf',
                 format: 'A4'
             });
             await browser.close();

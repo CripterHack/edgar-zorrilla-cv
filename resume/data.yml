@@ -113,10 +113,10 @@ hobbies:
   iconClass: fa fa-pencil
   url: https://example.com
 
-contributions:
-- name:
-  description:
-  url:
+# contributions:
+# - name:
+#   description:
+#   url:
 
 contact:
   email: edgar@izignamx.com

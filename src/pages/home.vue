@@ -380,8 +380,26 @@ export default Vue.component(name, getVueOptions(name));
   }
 }
 @media print {
-  body{padding:0}
-  .page {width:21cm;height:29.68cm}
+    @page {
+      size:A4;
+      margin:0;
+    }
+    html,body{
+        width: 210mm;
+        height: 282mm;
+        font-size: 11px;
+        background: #FFF;
+        overflow:visible;
+    }
+    body {
+       display: table;
+       table-layout: fixed;
+       padding-top:0cm;
+       padding-bottom:0cm;
+       height: auto;
+   }
+  html,body,.page-wrapper,.page{padding:0!important;margin:0!important}
+  .page{width:21cm;height:29.68cm}
   .section-content{padding-left:0!important}
 }
 </style>

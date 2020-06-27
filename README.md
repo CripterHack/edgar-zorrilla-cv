@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/salomonelli/best-resume-ever">
+  <a href="https://github.com/salomonelli/edgar-zorrilla-cv">
   <img src="src/assets/logo.png" alt="Markdownify" width="200"></a>
   <br>
   Edgar Zorrilla - Online CV Resume
@@ -37,4 +37,4 @@ This project uses several open source packages:
 ## Licenses
 
 [MIT](https://github.com/CripterHack/edgar-zorrilla-cv/blob/master/LICENSE)
-[MIT](https://github.com/salomonelli/best-resume-ever/blob/master/LICENCE.md)
+[MIT](https://github.com/salomonelli/edgar-zorrilla-cv/blob/master/LICENCE.md)

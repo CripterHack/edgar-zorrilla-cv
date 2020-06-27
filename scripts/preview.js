@@ -8,9 +8,6 @@ const getDirectories = () => {
     return fs.readdirSync(srcpath);
 };
 
-const getTemplateName = PDF => {
-    return PDF.replace('.pdf', '');
-};
 
 const convert = async (PDF) => {
     const pdfImage = new PDFImage(path.join(__dirname, '../pdf/' + PDF));
@@ -24,8 +21,8 @@ directories.forEach(async (dir) => {
     } catch (e) {
         console.dir(e);
     }
-    const source = path.join(__dirname, '../pdf/' + getTemplateName(dir) + '-0.png');
-    const output = path.join(__dirname, '../src/assets/preview/resume-' + getTemplateName(dir) + '.png');
+    const source = path.join(__dirname, '../pdf/' + 'edgar-zorrilla-cv' + '.png');
+    const output = path.join(__dirname, '../dist/' + 'edgar-zorrilla-cv' + '.png');
     console.log(output);
     mv(source, output, function (err) {
         if (err) console.dir(err);
