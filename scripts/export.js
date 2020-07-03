@@ -55,6 +55,8 @@ const convert = async () => {
         const fullDirectoryPath = path.join(__dirname, '../pdf/');
         const directories = getResumesFromDirectories();
         directories.forEach(async (dir) => {
+            console.log('dir');
+            console.log(dir);
             const browser = await puppeteer.launch({
                 args: ['--no-sandbox']
             });

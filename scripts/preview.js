@@ -10,12 +10,22 @@ const getDirectories = () => {
 
 
 const convert = async (PDF) => {
-    const pdfImage = new PDFImage(path.join(__dirname, '../pdf/' + PDF));
+    // const pdfImage = new PDFImage(path.join(__dirname, '../pdf/' + PDF));
+    console.log('PDF:');
+    console.log(PDF);
+    const pdfImage = new PDFImage('/pdf/edgar-zorrilla-cv.pdf', {
+        combinedImage: true
+    });
+    pdfImage.convertFile().then(function (imagePaths) {
+        // /tmp/slide.png
+    });
     await pdfImage.convertPage(0);
 };
 
 const directories = getDirectories();
 directories.forEach(async (dir) => {
+    console.log('dir: ');
+    console.log(dir);
     try {
         await convert(dir);
     } catch (e) {
