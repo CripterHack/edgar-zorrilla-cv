@@ -1,3 +1,4 @@
+const ora = require('ora');
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
@@ -12,6 +13,9 @@ const {
     first,
     mergeMap
 } = require('rxjs/operators');
+
+var spinn = ora('Starting...')
+spinn.start();
 
 const fetchResponse = () => {
     return new Promise((res, rej) => {
@@ -45,18 +49,18 @@ const timedOut = timeout => {
 };
 */
 const convert = async () => {
+    var spinner = ora('Connected to server ...');
     await waitForServerReachable().pipe(
         first()
     ).toPromise();
+    spinner.stop();
 
-    console.log('Connected to server ...');
-    console.log('Exporting ...');
+    var spinnerb = ora('Exporting ...');
+    spinnerb.start();
     try {
-        const fullDirectoryPath = path.join(__dirname, '../pdf/');
+        const fullDirectoryPath = path.join(__dirname, '../dist/cv/');
         const directories = getResumesFromDirectories();
         directories.forEach(async (dir) => {
-            console.log('dir');
-            console.log(dir);
             const browser = await puppeteer.launch({
                 args: ['--no-sandbox']
             });
@@ -76,6 +80,7 @@ const convert = async () => {
             });
             await browser.close();
         });
+        spinnerb.stop();
     } catch (err) {
         throw new Error(err);
     }
@@ -99,5 +104,5 @@ const getDirectories = () => {
     return fs.readdirSync(srcpath)
     .filter(file => file !== 'template.vue' && file !== 'options.js');
 };
-
 convert();
+spinn.stop();

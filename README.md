@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
   <a href="https://github.com/salomonelli/edgar-zorrilla-cv">
-  <img src="src/assets/logo.png" alt="Markdownify" width="200"></a>
+  <img src="src/assets/ez-cv-perfil.png" alt="Markdownify" width="200"></a>
   <br>
   Edgar Zorrilla - Online CV Resume
   <br>
@@ -21,7 +21,7 @@
 
 This project uses several open source packages:
 
-- <a href="https://github.com/salomonelli" target="_blank">@salomonelli</a>
+- <a href="https://github.com/salomonelli/best-resume-ever" target="_blank">@salomonelli</a>
 - <a href="https://github.com/vuejs/vue" target="_blank">Vue</a>
 - <a href="https://github.com/GoogleChrome/puppeteer" target="_blank">Puppeteer</a>
 - <a href="https://github.com/less/less.js" target="_blank">LESS</a>
@@ -36,5 +36,5 @@ This project uses several open source packages:
 
 ## Licenses
 
-[MIT](https://github.com/CripterHack/edgar-zorrilla-cv/blob/master/LICENSE)
-[MIT](https://github.com/salomonelli/edgar-zorrilla-cv/blob/master/LICENCE.md)
+[@cripterhack]() [MIT](https://github.com/CripterHack/edgar-zorrilla-cv/blob/master/LICENSE)
+[@salomonelli]() [MIT](https://github.com/salomonelli/best-resume-ever/blob/master/LICENCE.md)

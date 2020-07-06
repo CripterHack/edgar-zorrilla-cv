@@ -1,40 +1,25 @@
-const mv = require('mv');
 const PDFImage = require('pdf-image').PDFImage;
 const path = require('path');
 const fs = require('fs');
+const expect = require("chai").expect;
 
-const getDirectories = () => {
-    const srcpath = path.join(__dirname, '../pdf');
-    return fs.readdirSync(srcpath);
-};
-
-
-const convert = async (PDF) => {
-    // const pdfImage = new PDFImage(path.join(__dirname, '../pdf/' + PDF));
-    console.log('PDF:');
-    console.log(PDF);
-    const pdfImage = new PDFImage('/pdf/edgar-zorrilla-cv.pdf', {
+const convert = async() => {
+    const pdfImage = new PDFImage(path.join(__dirname, '../dist/cv/edgar-zorrilla-cv.pdf'), {
         combinedImage: true
     });
-    pdfImage.convertFile().then(function (imagePaths) {
-        // /tmp/slide.png
+    await pdfImage.convertFile().then(function(imagePath) {
+        // /dist/cv/edgar-zorrilla-cv.png
+        resolve();
+    }).catch(function (error) {
+        console.dir(error);
     });
-    await pdfImage.convertPage(0);
+    // await pdfImage.convertPage(0);
 };
-
-const directories = getDirectories();
-directories.forEach(async (dir) => {
-    console.log('dir: ');
-    console.log(dir);
+const converted = async() => {
     try {
-        await convert(dir);
+        await convert();
     } catch (e) {
         console.dir(e);
     }
-    const source = path.join(__dirname, '../pdf/' + 'edgar-zorrilla-cv' + '.png');
-    const output = path.join(__dirname, '../dist/' + 'edgar-zorrilla-cv' + '.png');
-    console.log(output);
-    mv(source, output, function (err) {
-        if (err) console.dir(err);
-    });
-});
+};
+converted();
