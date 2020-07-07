@@ -379,26 +379,4 @@ export default Vue.component(name, getVueOptions(name));
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
   }
 }
-@page {
-  size:A4;
-  margin:0;
-}
-</style>
-<style media="print">
-  html,body{
-    width: 210mm;
-    height: 297mm;
-    font-size: 11px;
-    background: #FFF;
-    overflow:visible;
-  }
-  body {
-    display: table;
-    table-layout: fixed;
-  }
-  html,body,.page-wrapper,.page{padding:0;margin:0;page-break-after:always}
-  .page{width:210mm}
-  .page,.page-wrapper,.page-inner{height:297mm}
-  .section-content{padding-left:0!important}
-  body,.page-wrapper{padding:0!important}
 </style>
