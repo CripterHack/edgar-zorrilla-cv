@@ -84,6 +84,7 @@ const convert = async () => {
                     left: '0px'
                 }
             });
+            await page.close();
             await browser.close();
         });
     } catch (err) {
