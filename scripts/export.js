@@ -1,4 +1,3 @@
-const ora = require('ora');
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
@@ -13,9 +12,6 @@ const {
     first,
     mergeMap
 } = require('rxjs/operators');
-
-var spinn = ora('Starting...')
-spinn.start();
 
 const fetchResponse = () => {
     return new Promise((res, rej) => {
@@ -49,14 +45,10 @@ const timedOut = timeout => {
 };
 */
 const convert = async () => {
-    var spinner = ora('Connected to server ...');
     await waitForServerReachable().pipe(
         first()
     ).toPromise();
-    spinner.stop();
-
-    var spinnerb = ora('Exporting ...');
-    spinnerb.start();
+    
     try {
         const fullDirectoryPath = path.join(__dirname, '../dist/cv/');
         const directories = getResumesFromDirectories();
@@ -74,17 +66,27 @@ const convert = async () => {
             ) {
                 fs.mkdirSync(fullDirectoryPath);
             }
+            await page.emulateMedia('print');
+            await page.screenshot({
+                path: fullDirectoryPath + 'edgar-zorrilla-cv.png',
+                fullPage: true,
+                omitBackground: false
+            });
             await page.pdf({
                 path: fullDirectoryPath + 'edgar-zorrilla-cv' + '.pdf',
-                format: 'A4'
+                format: 'A4',
+                margin: {
+                    top: '0px',
+                    right: '0px',
+                    bottom: '0px',
+                    left: '0px'
+                }
             });
             await browser.close();
         });
-        spinnerb.stop();
     } catch (err) {
         throw new Error(err);
     }
-    console.log('Finished exports.');
 };
 
 const getResumesFromDirectories = () => {
@@ -105,4 +107,4 @@ const getDirectories = () => {
     .filter(file => file !== 'template.vue' && file !== 'options.js');
 };
 convert();
-spinn.stop();
+console.log('Finished exports.');
