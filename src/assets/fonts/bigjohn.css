@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Big John';
+    src: url('BigJohn.eot');
+    src: local('BigJohn'),
+        url('BigJohn.eot?#iefix') format('embedded-opentype'),
+        url('BigJohn.woff2') format('woff2'),
+        url('BigJohn.woff') format('woff'),
+        url('BigJohn.ttf') format('truetype'),
+        url('BigJohn.svg#BigJohn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

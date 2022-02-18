@@ -3,40 +3,61 @@ name:
   first: Edgar
   middle:
   last: Zorrilla
-about: I am a web\/app developer, designer, and writer at IzignaMx currently living in CDMX, México. With 6 years of web design\/development experience. My interests range from coding, lettering, hacking, climate change to astrophysics. I am also interested in user experience, gaming, wine and of course pizza (vegan)... ¡I love make innovative design, and create amazing things!
-position: SemiSenior FullStack Developer
+about: I'm a web\/app developer, designer, and writer at IzignaMx currently living in CDMX, México. With 7 years of web design\/development experience. My interests range from coding, lettering, hacking, climate change to astrophysics. I am also interested in user experience, gaming, wine and of course pizza (vegan)... ¡I love make innovative design, and create amazing things!
+position: FullStack Developer
+subhead: Web/WebApps (PHP, Angular, Liquid, Vue, HTML+CSS+JS, Go, React)
 
 birth:
   year: 1995
   location: Mexico city
+  yo: 27
+  date: 05/01/1995
 
 experience:
-- company: Mousai - the art of coding
+- company: Entravision
   position: FullStack Developer
-  timeperiod: January 2019 - April 2020
+  timeperiod: Employee 09/2020 - 12/2021
+  description: I worked with an international team, where I took responsibility for the design and development of architecting solutions, designing interfaces, estimating work, building new modules/templates/components, maintaining existing capabilities, and creating Responsive/Adaptive web applications hosted on-premise (WordPress VIP with Vagrant) passing through a github repository with several branches, or in the cloud (AWS).
+  website: https://entravision.com
+  logo: https://edgar.izignamx.com/assets/img/entravision-logo.png
+
+- company: Mousai
+  position: FullStack Developer
+  timeperiod: Employee 01/2019 - 04/2020
   description: Implementación de diseño desde invision y desarrollo en WordPress, Shopify Liquid. Diseño Web y de Apps en Photoshop, Sketch (Mac), Invision, Figma, Inkscape, GIMP. Actualización, mantenimiento y optimización de proyectos colaborativos con github y Visual Studio, Creación de tutoriales para uso del cliente, Cotización y Planeación de proyectos.
   website: https://mousai.io
+  logo: https://edgar.izignamx.com/assets/img/mousai-logo.png
 
 - company: Digitalab
   position: Web Designer/Developer
-  timeperiod: April 2016 - April 2019
-  description: Blogs, Tiendas, Sistemas de reserva online, CRM, POS en WordPress, Estilización de plantillas corporativas para Campañas "Mailing" en Mailchimp. Sitios nativos en HTML para One Pages. Estudio, Implementación y Optimización SEO. Optimización en entrega y peso de scripts/imágenes/html/cache. Configuración de .htacess y robots.txt. Análisis y Optimización de seguridad en plataformas Web, Google Analytics, Keyword Planner, SmartLook, CentOS, Plesk, Webmin, Certificados SSL, Animaciones SVG+JS+CSS. Modificación y creación de themes y plugins en WordPress con PHP, CSS y JS. Navegación y requisición de elementos/data con AJAX. Mobile First. Facebook & Messenger API. Proyectos theorganichearthco.com, kartellmexico.com, mukka.mx, entrale.org, greencarpet.com.mx, crucerosflamingo, criminal.com.mx, lospinostultepec.com, grupodescoa.com, inkstudio, ikus-marketing, eypets, santapizza.com.mx, drackermans, gondolachocolateria.com.mx, entre otros.
+  timeperiod: External Employee 04/2016 - 10/2017 Freelancer per hour 11/2017 - 04/2019
+  description: Blogs, Tiendas, Sistemas de reserva online, CRM, POS en WordPress, Estilización de plantillas corporativas para Campañas "Mailing" en Mailchimp. Sitios nativos en HTML para One Pages. Estudio, Implementación y Optimización SEO. Optimización en entrega y peso de scripts/imágenes/html/cache. Configuración de .htacess y robots.txt. Análisis y Optimización de seguridad en plataformas Web, Google Analytics, Keyword Planner, SmartLook, CentOS, Plesk, Webmin, Certificados SSL, Animaciones SVG+JS+CSS. Modificación y creación de themes y plugins en WordPress con PHP, CSS y JS. Navegación y requisición de elementos/data con AJAX.
   website: https://digitalab.mx
+  logo: https://edgar.izignamx.com/assets/img/digitalab-logo.png
 
 - company: Inc Marketing
   position: FullStack Developer
-  timeperiod: March 2014 - December 2014
+  timeperiod: Assimilated Employee 11/2017 - 12/2017 Freelancer per project 01/2018 - 02/2018
   description: Plataformas CMS en WordPress, SilverStripe, PageKit. Plataforma CRM en PHP (Symphony). Sistema "Real State" en ReactJs, Ecommerces con Woocommerce + Conekta / OpenPay. Big Data de precios en tablas "csv". Interacción con APIs, Login con Redes Sociales. Proyectos. goldmanberkeley.com, autofacil.com, jarming.mx, crm.jarming.mx, incmarketing.com.mx, mrsushi.rest, estilos en plataforma dr-chef para mrsushi, subastaenergetica.com.
+  logo: https://edgar.izignamx.com/assets/img/inc-marketing-logo.png
+
+- company: IzignaMx
+  position: CEO / Graphic Designer / Front-End & Back-End Developer
+  timeperiod: Self-employed 07/2014 - 04/2016
+  description: Web Design and Development, Photoshop, HTML5, CSS3, jQuery, Javascript Vanilla, NodeJs, GruntJs, GulpJs, Webpack, Server administration, Hosting, Web Security (Pentesting), SEO Optimization, Copywriter, Long Tails, Digital Marketing, Adwords, Analytics, Adsense, Facebook Ads, Google Partner.
+  logo: https://edgar.izignamx.com/assets/img/izignamx-logo.png
 
 education:
 - degree: Computer Systems Engineering
+  school: Latin America Technological University UTEL
   timeperiod: Since 01/2020.
   description: Current average 9.85. 6 of 27 subjects studied. Online studies. Currently studying 2 subjects per month., Utel university, Mexico city.
   website: https://www.utel.edu.mx/sites/default/files/Ingenieria-en-Sistemas-Computacionales.pdf
+  logo: https://edgar.izignamx.com/assets/img/utel-logo.png
 
-- degree: General Baccalaureate Exam
-  timeperiod: April 2016.
-  description: Average 8.5, CENEVAL certification, Mexico city.
+# - degree: General Baccalaureate Exam
+  # timeperiod: April 2016.
+  # description: Average 8.5, CENEVAL certification, Mexico city.
 
 # skill level goes 0 to 100
 skills:
@@ -44,87 +65,45 @@ skills:
   level: 100
 - name: CSS3
   level: 100
-- name: JS Vanilla
-  level: 95
-- name: jQuery
-  level: 100
-- name: SQL
-  level: 80
+- name: Go
+  level: 70
 - name: PHP
   level: 90
-- name: UI
-  level: 95
-- name: UX
-  level: 65
+- name: JS
+  level: 90
 - name: SEO
   level: 75
-- name: Python
-  level: 70
-- name: Node.js
-  level: 70
-- name: Grunt
-  level: 70
-- name: Gulp
-  level: 60
-- name: Webpack
-  level: 60
+- name: SQL
+  level: 80
 - name: React
   level: 60
-- name: Ionic
-  level: 65
-- name: Angular 2
-  level: 65
-- name: TypeScript
-  level: 80
-- name: Shopify Liquid
-  level: 80
+- name: Liquid
+  level: 90
+- name: GIT
+  level: 90
+- name: CI/CD
+  level: 60
 - name: Bash
   level: 60
-- name: JSON
-  level: 100
-- name: Windows
-  level: 90
-- name: MacOS
-  level: 80
-- name: Linux
-  level: 90
-- name: Pixel Perfect
-  level: 95
-- name: Responsive design
-  level: 100
-- name: cPanel/WHM
-  level: 90
-knowledge: Also proficient in Adobe Photoshop and Illustrator, Figma, Invision, Sketch, Inkscape, GIMP, GIT, Visual Studio and grew up bilingual
-  (Spanish native and English).
 
-projects:
-- name: Portfolio
-  platform:
-  timeperiod: February 2014 - 2016
-  description: My two first years of work. Mostly are design and coding implementation on HTML+CSS+JS or WordPress.
-  url: https://drive.google.com/open?id=0BwjnDrnqMQI6b1hWc3RYTlo2Zlk
-
-hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
-
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
-
-# contributions:
-# - name:
-#   description:
-#   url:
+# projects:
+# - name: 
+  # platform:
+  # timeperiod: February 2014 - 2016
+  # description: My two first years of work. Mostly are design and coding implementation on HTML+CSS+JS or WordPress.
+  # url: https://drive.google.com/open?id=0BwjnDrnqMQI6b1hWc3RYTlo2Zlk
 
 contact:
   email: edgar@izignamx.com
+  emailb: edgar.cripter@gmail.com
   phone: +52 55 3376 0889
   street: Mexico city
   city: CDMX
-  website: https://linkedin.com/in/cripterhack
+  website: https://edgar.izignamx.com/
+  urlcv: edgar.izignamx.com
+  linkedin: https://linkedin.com/in/cripterhack/
   github: cripterhack
+  rfc: R.F.C. ZOCE950105KX5
 # en, de, fr, pt, ca, cn, it, es
 lang: en
 `

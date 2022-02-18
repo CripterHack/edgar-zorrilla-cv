@@ -53,7 +53,7 @@ const convert = async () => {
         const fullDirectoryPath = path.join(__dirname, '../dist/cv/');
         const printCSSPath = path.join(__dirname, '../src/assets/css/');
         const directories = getResumesFromDirectories();
-        directories.forEach(async (dir) => {
+        directories.forEach(async () => {
             const browser = await puppeteer.launch({
                 args: ['--no-sandbox']
             });
@@ -67,7 +67,7 @@ const convert = async () => {
             ) {
                 fs.mkdirSync(fullDirectoryPath);
             }
-            await page.addStyleTag({path: printCSSPath + 'print.css'});
+            await page.addStyleTag({ path: printCSSPath + 'print.css' });
             await page.emulateMedia('print');
             await page.screenshot({
                 path: fullDirectoryPath + 'edgar-zorrilla-cv.png',

@@ -2,11 +2,12 @@
 const lang = {
     contact: 'Contact',
     born: 'Born',
+    years: 'yo',
     bornIn: 'in',
     experience: 'Experience',
     education: 'Education',
     skills: 'Skills',
-    projects: 'Projects',
+    projects: 'Portfolio',
     contributions: 'Contributions',
     about: 'About me'
 };

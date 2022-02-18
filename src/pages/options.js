@@ -50,6 +50,10 @@ function getVueOptions (name) {
                 if(this.person.contact.email) {
                     links.email = `mailto:${this.person.contact.email}`;
                 }
+                
+                if(this.person.contact.emailb) {
+                    links.emailb = `mailto:${this.person.contact.emailb}`;
+                }
 
                 if(this.person.contact.linkedin) {
                     links.linkedin = `https://linkedin.com/in/${this.person.contact.linkedin}`;
@@ -57,6 +61,10 @@ function getVueOptions (name) {
 
                 if(this.person.contact.phone) {
                     links.phone = `tel:${this.person.contact.phone}`;
+                }
+
+                if(this.person.contact.phone) {
+                    links.whatsapp = `https://web.whatsapp.com/send?phone=${this.person.contact.phone}`;
                 }
 
                 return links;

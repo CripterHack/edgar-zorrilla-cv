@@ -1,6 +1,6 @@
 {
   "name": "edgar-zorrilla-cv",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Build fast and easy multiple beautiful resumes and create your best CV ever! ",
   "author": "Edgar Zorrilla",
   "license": "MIT",
@@ -25,15 +25,12 @@
     "lint:fix": "eslint --ext .js,.vue src scripts --fix"
   },
   "dependencies": {
+    "@fontsource/aileron": "^4.5.0",
     "font-awesome": "4.7.0",
     "js-yaml": "3.13.1",
     "material-design-icons": "3.0.1",
     "material-icons": "0.2.3",
-    "npm-font-open-sans": "1.1.0",
-    "npm-font-open-sans-condensed": "1.0.3",
-    "raleway-webfont": "3.0.1",
-    "roboto-fontface": "0.10.0",
-    "source-sans-pro": "2.20.2",
+    "puppeteer-core": "^1.9.0",
     "vue": "2.5.17",
     "vue-router": "3.0.1"
   },
